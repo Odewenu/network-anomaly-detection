@@ -32,6 +32,12 @@ ct_flw_http_mthd,float64
 is_sm_ips_ports,int8
 attack_cat,object
 label,int8
+total_bytes,float64
+byte_ratio,float64
+total_packets,float64
+packet_ratio,float64
+source_bytes_per_packet,float64
+destination_bytes_per_packet,float64
 proto_arp,int64
 proto_ospf,int64
 proto_other,int64
