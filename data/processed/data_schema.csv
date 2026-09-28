@@ -30,7 +30,6 @@ is_ftp_login,float64
 ct_ftp_cmd,float64
 ct_flw_http_mthd,float64
 is_sm_ips_ports,int8
-attack_cat,object
 label,int8
 total_bytes,float64
 byte_ratio,float64
