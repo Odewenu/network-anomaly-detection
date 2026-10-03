@@ -1,0 +1,5 @@
+model,train_accuracy,val_accuracy,train_f1,val_f1,f1_gap
+XGBoost,0.9505,0.9269,0.9508,0.9277,0.0231
+Random Forest,0.9977,0.9243,0.9977,0.925,0.0727
+Decision Tree,0.9146,0.9139,0.9184,0.9178,0.0006
+Logistic Regression,0.8713,0.8733,0.8776,0.8795,-0.0019

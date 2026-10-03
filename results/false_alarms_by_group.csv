@@ -1,0 +1,15 @@
+group,normal_records,false_alarm_%
+state_INT,1263,79.4
+service_ftp,752,38.0
+service_http,3722,34.7
+state_FIN,23366,27.3
+service_-,22206,26.2
+proto_tcp,25649,25.0
+proto_udp,5253,19.0
+state_REQ,330,3.3
+service_dns,2611,0.6
+state_CON,6109,0.3
+service_ftp-data,949,0.2
+proto_arp,129,0.0
+service_ssh,200,0.0
+service_smtp,629,0.0

@@ -1,0 +1,6 @@
+,caught_fuzzers,missed_fuzzers,normal_traffic
+state_CON,0.0,0.0,0.2
+dload,-0.38,-0.38,0.13
+service_ftp-data,0.0,0.0,0.03
+ackdat,0.45,0.48,0.08
+swin,-0.02,0.3,0.1
