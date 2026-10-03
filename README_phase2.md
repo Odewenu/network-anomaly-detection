@@ -2,8 +2,8 @@
 
 This phase builds, tunes and tests the model that separates normal network traffic from attacks, using the cleaned UNSW-NB15 data from Phase 1.
 
-**Notebook:** [`notebooks/02_model_training_final.ipynb`](notebooks/02_model_training_final.ipynb)
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Odewenu/network-anomaly-detection/blob/main/notebooks/02_model_training_final.ipynb)
+**Notebook:** [`notebooks/02_model_training.ipynb`](notebooks/02_model_training.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Odewenu/network-anomaly-detection/blob/main/notebooks/02_model_training.ipynb)
 
 ### What was done
 
@@ -33,15 +33,13 @@ Final model on the test set:
 |---|---|---|---|---|---|
 | XGBoost (tuned) | [0.8277] | [0.6886] | [0.9467] | [0.7973] | [0.9618] |
 
-Best settings found: `[paste from models/best_params.json]`
-
 The full comparison of all models on the test set is in `results/test_comparison_all_models.csv`.
 
 ### Files added in this phase
 
 ```
 notebooks/
-  02_model_training_final.ipynb
+  02_model_training.ipynb
 models/
   xgb_model.pkl              trained XGBoost model
   feature_columns.json       column names, in the exact order the model expects
@@ -60,7 +58,7 @@ results/
 ### How to reproduce
 
 1. Run `notebooks/01_data_cleaning_clean.ipynb` first (or make sure `data/processed/` exists in the repo).
-2. Open `notebooks/02_model_training_final.ipynb` in Colab and run all cells from top to bottom.
+2. Open `notebooks/02_model_training.ipynb` in Colab and run all cells from top to bottom.
 3. The model and its supporting files are written to `models/`.
 
 Random seed is fixed at 42, so the split and the tuning search can be repeated.
@@ -75,4 +73,3 @@ Random seed is fixed at 42, so the split and the tuning search can be repeated.
 ### Limitations
 
 - Test scores are lower than validation scores. The UNSW-NB15 test set has a different mix of attacks from the training set, and overlapping rows were removed in Phase 1.
-- [Add one line on any attack types the model catches poorly, from `results/per_attack_detection.csv`.]
