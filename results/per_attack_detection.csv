@@ -1,0 +1,10 @@
+attack_type,samples,detected_%
+Fuzzers,4231,82.44
+Shellcode,303,94.39
+Exploits,7389,98.39
+DoS,1504,98.54
+Backdoor,268,99.25
+Reconnaissance,2012,99.3
+Generic,1257,99.52
+Analysis,323,99.69
+Worms,42,100.0
