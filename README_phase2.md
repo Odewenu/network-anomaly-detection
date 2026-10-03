@@ -22,16 +22,16 @@ Validation set (used to choose the model):
 
 | Model | Precision | Recall | F1 | ROC-AUC |
 |---|---|---|---|---|
-| Logistic Regression | [fill in] | [fill in] | [fill in] | [fill in] |
-| Decision Tree | [fill in] | [fill in] | [fill in] | [fill in] |
-| Random Forest | [fill in] | [fill in] | [fill in] | [fill in] |
-| XGBoost | [fill in] | [fill in] | [fill in] | [fill in] |
+| Logistic Regression | [0.8310] | [0.9341] | 0.8795] | [0.9299] |
+| Decision Tree | [0.8704] | [0.9707] | [0.9178] | [0.9747] |
+| Random Forest | [0.9080] | [0.9426] | [0.9250] | [0.9832] |
+| XGBoost | [0.9085] | [0.9477] | [0.9277] | [0.9844] |
 
 Final model on the test set:
 
 | Model | Accuracy | Precision | Recall | F1 | ROC-AUC |
 |---|---|---|---|---|---|
-| XGBoost (tuned) | [fill in] | [fill in] | [fill in] | [fill in] | [fill in] |
+| XGBoost (tuned) | [0.8277] | [0.6886] | [0.9467] | [0.7973] | [0.9618] |
 
 Best settings found: `[paste from models/best_params.json]`
 
