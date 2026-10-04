@@ -1,0 +1,31 @@
+{
+  "note": "Values taken from the Phase 1 notebook (01_data_cleaning_clean.ipynb). Apply in the order listed under 'pipeline_order'.",
+  "pipeline_order": [
+    "convert proto, service, state to text",
+    "add the 6 derived features",
+    "log1p on log_transform_columns",
+    "group proto: keep only the protocols that appear as proto_* columns in models/feature_columns.json, everything else becomes 'other'",
+    "one-hot encode proto, service, state, then reindex to models/feature_columns.json (missing columns = 0)",
+    "scale with data/processed/scaler.pkl (transform only, never fit); columns = scaler.feature_names_in_",
+    "drop label and attack_cat, order columns exactly as models/feature_columns.json"
+  ],
+  "derived_features": {
+    "total_bytes": "sbytes + dbytes",
+    "byte_ratio": "sbytes / (dbytes + 1)",
+    "total_packets": "spkts + dpkts",
+    "packet_ratio": "spkts / (dpkts + 1)",
+    "source_bytes_per_packet": "sbytes / (spkts + 1)",
+    "destination_bytes_per_packet": "dbytes / (dpkts + 1)"
+  },
+  "log_transform_columns": [
+    "dur", "spkts", "dpkts", "sbytes", "dbytes", "rate", "sload", "sloss", "dloss",
+    "sinpkt", "dinpkt", "sjit", "djit", "synack", "trans_depth", "response_body_len",
+    "ct_src_dport_ltm", "ct_dst_sport_ltm", "is_ftp_login", "ct_ftp_cmd", "ct_flw_http_mthd",
+    "total_bytes", "byte_ratio", "total_packets", "packet_ratio"
+  ],
+  "log_transform": "numpy.log1p",
+  "categorical_columns": ["proto", "service", "state"],
+  "label": {"0": "normal", "1": "attack"},
+  "model_file": "models/xgb_model.pkl",
+  "expected_test_scores": {"accuracy": 0.8277, "precision": 0.6886, "recall": 0.9467, "f1": 0.7973, "roc_auc": 0.9618}
+}
