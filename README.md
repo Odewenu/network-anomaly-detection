@@ -106,3 +106,23 @@ Random seed is fixed at 42, so the split and the tuning search can be repeated.
 ### Limitations
 
 - Test scores are lower than validation scores. The UNSW-NB15 test set has a different mix of attacks from the training set, and overlapping rows were removed in Phase 1.
+
+
+## Phase 3: Model Deployment using streamlit
+
+## How to Run locally
+
+1. **Clone or Download** this repository to your computer.
+2. Open your terminal/command prompt inside this project folder.
+3. Install the required libraries:
+   ```bash
+   pip install -r requirements.txt
+   ```
+   OR use:
+   pip install numpy pandas joblib streamlit scikit-learn xgboost
+
+4. Launch the Streamlit dashboard:
+   ```bash
+   streamlit run app.py
+   ```
+5. Wait patiently for the brower page to load and take ypu to the UI of the APP.
